@@ -1,0 +1,1436 @@
+/* Base Styles */
+/* Defines custom CSS properties (variables) for consistent colors throughout the website. */
+:root {
+    --primary-color: #E97700;
+    --primary-hover: #D56B00;
+    --secondary-color: #EEBF8F;
+    --secondary-hover: #E0B080;
+    --blue-dark: #2672BD;
+    --blue-light: #8FCBE7;
+    --text-dark: #2D2F30;
+    --text-light: #FAF9F5;
+    --bg-light: #FFF3EA;
+    --gray-light: #E5E7EB;
+    --tag-blue: #BFDBFE;
+    --tag-blue-text: #1E40AF;
+    --form-bg: #EFF6FF; /* New color from mockup */
+}
+
+/* Universal box-sizing reset for all elements. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic body styling: font, background, text color, line height, and smooth scrolling. */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Added for smooth scrolling */
+}
+
+/* Container for centering content and providing responsive padding. */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Responsive padding */
+}
+
+/* Anchor tag reset: removes underline and inherits color. */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* List reset: removes default list style. */
+ul {
+    list-style: none;
+}
+
+/* Input elements inherit font styles from their parent. */
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Button Styles */
+/* Primary button styling. */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-block; /* Ensure it respects padding/margin */
+    text-align: center;
+}
+
+/* Primary button hover effect. */
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Secondary button styling. */
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Secondary button hover effect. */
+.btn-secondary:hover {
+    background-color: var(--secondary-hover);
+}
+
+/* Header Section */
+/* Styles for the main header, including sticky positioning and shadow. */
+.header {
+    background-color: var(--text-light);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Header content layout using flexbox for alignment and wrapping. */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Logo styling with icon and text. */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* Styling for the logo icon. */
+.logo-icon {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+/* Main navigation styling. */
+.main-nav {
+    display: flex;
+    gap: 25px;
+    flex-grow: 1; /* Allow navigation to take available space */
+    justify-content: center; /* Center navigation items */
+}
+
+/* Navigation link styling with hover and active states. */
+.nav-link {
+    padding: 8px 0;
+    position: relative;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Navigation link hover and active color. */
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color);
+}
+
+/* Active navigation link indicator. */
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+/* Authentication buttons styling. */
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Login button styling with hover effect. */
+.login-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Login button hover color. */
+.login-btn:hover {
+    color: var(--primary-color);
+}
+
+/* Mobile menu button (initially hidden). */
+.mobile-menu-btn {
+    display: none; /* Hidden by default */
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
+/* Hero Section (General & Hire Page Specific) */
+/* Shared styles for hero sections, including padding, text color, and gradient background. */
+.hero, .hire-hero {
+    padding: 80px 0;
+    color: var(--text-light);
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* For gradient background */
+}
+
+/* Gradient background for hero sections. */
+.gradient-bg {
+    background: linear-gradient(to right, var(--blue-dark), var(--blue-light));
+}
+
+/* Hero content layout using flexbox. */
+.hero-content, .hire-hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+/* Hero text block styling. */
+.hero-text, .hire-hero-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+/* Hero section main heading. */
+.hero-text h1, .hire-hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+/* Hero section paragraph text. */
+.hero-text p, .hire-hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Hero section buttons container. */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* Hero section image container. */
+.hero-image, .hire-hero-image {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hero section image styling. */
+.hero-image img, .hire-hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Job Search Section (jobs.html specific) */
+/* Styling for the job search section background and padding. */
+.job-search {
+    background-color: var(--form-bg);
+    padding: 30px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 50px; /* Space before listings */
+}
+
+/* Search form layout and styling. */
+.search-form {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    background-color: var(--text-light);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+/* Search input field container. */
+.search-input {
+    flex: 1; /* Allow inputs to grow */
+    min-width: 180px; /* Minimum width before wrapping */
+}
+
+/* Styling for search input fields. */
+.search-input input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--gray-light);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+/* Placeholder text color for search inputs. */
+.search-input input::placeholder {
+    color: #999;
+}
+
+/* Styling for the search button. */
+.search-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 8px;
+}
+
+/* Job Listings Section (jobs.html specific) */
+/* Section container for job listings. */
+.job-listings-section {
+    padding: 50px 0; /* Adjust padding as needed */
+    background-color: var(--bg-light);
+}
+
+/* Main heading for job listings section. */
+.job-listings-section h1 {
+    text-align: left; /* Align to left as per image */
+    font-size: 2.5rem;
+    margin-bottom: 30px; /* Space between title and content */
+    color: var(--text-dark);
+}
+
+/* Container for sidebar and job cards, using flexbox for side-by-side layout. */
+.job-listings-container {
+    display: flex; /* This is key for side-by-side layout */
+    gap: 30px; /* Space between sidebar and job cards */
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Styles for the filters sidebar. */
+.filters-sidebar {
+    flex: 0 0 280px; /* Fixed width for the sidebar */
+    background-color: var(--text-light);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    /* Make filters sticky on larger screens */
+    position: sticky;
+    top: 100px; /* Adjust based on header height */
+    align-self: flex-start; /* Ensure it sticks to the top of its flex container */
+}
+
+/* Styling for the "Advanced Filters" button. */
+.advanced-filters-btn {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 25px; /* Space below the button */
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the "Advanced Filters" button. */
+.advanced-filters-btn:hover {
+    background-color: var(--secondary-hover);
+}
+
+/* Styling for each filter group. */
+.filter-group {
+    margin-bottom: 20px;
+}
+
+/* Styling for filter group headers. */
+.filter-header {
+    border-bottom: 1px solid var(--gray-light);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Heading for filter group titles. */
+.filter-header h3 {
+    font-size: 1.1rem; /* Slightly smaller for filter group titles */
+    color: var(--text-dark);
+    margin: 0;
+}
+
+/* Styling for individual filter options (checkbox and label). */
+.filter-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Styling for checkboxes within filter options. */
+.filter-option input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: var(--primary-color); /* Styles the checkbox itself */
+}
+
+/* Styling for filter option labels. */
+.filter-option label {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
+/* Container for job cards, using CSS Grid for a responsive layout. */
+.job-listings {
+    flex: 1; /* Allows job listings to take up remaining space */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid for job cards */
+    gap: 25px;
+}
+
+/* Styling for individual job cards. */
+.job-card {
+    background-color: var(--text-light);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Job card header with company logo and title. */
+.job-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Styling for the company logo placeholder in job cards. */
+.company-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: var(--blue-dark);
+    color: var(--text-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Job title within the job card header. */
+.job-header h3 {
+    font-size: 1.25rem;
+    margin: 0;
+    color: var(--text-dark);
+}
+
+/* Company information within job cards. */
+.company-info {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Job description text within job cards. */
+.job-description {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Container for job tags. */
+.job-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Styling for individual job tags. */
+.tag {
+    background-color: var(--tag-blue);
+    color: var(--tag-blue-text);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Job card footer with location and apply button. */
+.job-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* Pushes to the bottom of the card */
+}
+
+/* Job location text within job cards. */
+.job-location {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Pagination controls styling. */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+/* Styling for pagination buttons. */
+.pagination button {
+    background-color: var(--gray-light);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: background-color 0.3s ease;
+}
+
+/* Pagination button hover effect. */
+.pagination button:hover {
+    background-color: var(--primary-hover);
+    color: var(--text-light);
+}
+
+/* Active pagination button styling. */
+.pagination button.page-active {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+/* Features Section */
+/* Main container for the features section. */
+.features {
+    padding: 80px 0;
+    background-color: var(--text-light);
+    text-align: center;
+}
+
+/* Heading for the features section. */
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--text-dark);
+}
+
+/* Grid layout for feature cards. */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Styling for individual feature cards. */
+.feature-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Image styling within feature cards. */
+.feature-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Cover the area, cropping if necessary */
+}
+
+/* Content area within feature cards. */
+.feature-content {
+    padding: 25px;
+    text-align: left;
+    flex-grow: 1; /* Allows content to push footer down */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Heading within feature card content. */
+.feature-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+/* Paragraph text within feature card content. */
+.feature-content p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Allows paragraph to grow */
+}
+
+/* Link styling within feature card content. */
+.feature-content a {
+    color: var(--primary-color);
+    font-weight: 600;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for links in feature card content. */
+.feature-content a:hover {
+    color: var(--primary-hover);
+}
+
+/* Impact Section */
+/* Main container for the impact section, with gradient background (assumed from hero). */
+.impact {
+    padding: 80px 0;
+    color: var(--text-light);
+    text-align: center;
+}
+
+/* Heading for the impact section. */
+.impact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--text-light);
+}
+
+/* Layout for impact content (text and image). */
+.impact-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+/* Text block within the impact section. */
+.impact-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+/* Box styling for impact text. */
+.impact-box {
+    background-color: rgba(255, 255, 255, 0.15); /* Slightly transparent white */
+    padding: 30px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px); /* Optional: add a blur effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Paragraph text within impact box. */
+.impact-box p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Image container within the impact section. */
+.impact-image {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image styling within the impact section. */
+.impact-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Grid layout for statistics. */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+/* Styling for individual statistic items. */
+.stat-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 12px;
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Number styling for statistics. */
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+/* Label styling for statistics. */
+.stat-label {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    opacity: 0.9;
+}
+
+/* Hire Section (hire.html specific) */
+/* Hero section specific to the hire page (inherits many styles from .hero). */
+.hire-hero {
+    padding: 80px 0;
+}
+
+/* Hire hero content layout (inherits from .hero-content). */
+.hire-hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Hire hero text block styling (inherits from .hero-text). */
+.hire-hero-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+    color: var(--text-light);
+}
+
+/* Main heading for hire hero section (inherits from .hero-text h1). */
+.hire-hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+/* Paragraph text for hire hero section (inherits from .hero-text p). */
+.hire-hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Hire hero image container (inherits from .hero-image). */
+.hire-hero-image {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hire hero image styling (inherits from .hero-image img). */
+.hire-hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Section for advertising jobs. */
+.advertise-job {
+    padding: 80px 0;
+    background-color: var(--text-light);
+    text-align: center;
+}
+
+/* Content layout for advertising jobs, with image on the right. */
+.advertise-job-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap-reverse; /* Image on right, text on left */
+}
+
+/* Text block for advertising jobs. */
+.advertise-job-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+/* Heading for advertising job text. */
+.advertise-job-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+/* Paragraph text for advertising job. */
+.advertise-job-text p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Image container for advertising jobs. */
+.advertise-job-image {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image styling within advertising job section. */
+.advertise-job-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo overlay on the advertise job image. */
+.advertise-job-logo {
+    position: absolute;
+    bottom: -20px; /* Adjust as needed */
+    right: -20px; /* Adjust as needed */
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 15px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Image within the advertise job logo. */
+.advertise-job-logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: none; /* Remove shadow from this internal image */
+}
+
+/* Section for displaying our partners. */
+.our-partners {
+    padding: 80px 0;
+    background-color: var(--bg-light);
+    text-align: center;
+}
+
+/* Heading for the partners section. */
+.our-partners h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--text-dark);
+}
+
+/* Container for partner logos. */
+.partner-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+/* Styling for individual partner logos. */
+.partner-logos img {
+    max-height: 80px; /* Control size of partner logos */
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%); /* Make logos grayscale */
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for partner logos. */
+.partner-logos img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Testimonial box styling. */
+.testimonial-box {
+    background-color: var(--text-light);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    max-width: 800px;
+    margin: 0 auto;
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* Paragraph within testimonial box. */
+.testimonial-box p {
+    margin: 0;
+}
+
+/* Section for company registration. */
+.register-company {
+    padding: 80px 0;
+    text-align: center;
+    color: var(--text-light);
+}
+
+/* Heading for company registration section. */
+.register-company h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--text-light);
+}
+
+/* Container for the registration form. */
+.register-form-container {
+    background-color: var(--form-bg); /* Use the new form background color */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--text-dark); /* Ensure text is readable on light background */
+}
+
+/* Grid layout for the registration form. */
+.register-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Form group styling within registration form. */
+.register-form .form-group {
+    margin-bottom: 0; /* Remove default margin as grid handles spacing */
+}
+
+/* Styling for text, email, tel, and URL input fields in registration form. */
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="tel"],
+.register-form input[type="url"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--gray-light);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text-dark);
+    background-color: #fff; /* White background for inputs */
+}
+
+/* Placeholder text color for registration form inputs. */
+.register-form input::placeholder {
+    color: #999;
+}
+
+/* Submit button styling for registration form. */
+.register-form button[type="submit"] {
+    grid-column: 1 / -1; /* Span across all columns */
+    padding: 15px 30px;
+    font-size: 1.1rem;
+}
+
+/* Footer Section */
+/* Main footer styling. */
+.footer {
+    background-color: var(--text-dark);
+    color: var(--text-light);
+    padding: 50px 0 20px;
+}
+
+/* Grid layout for footer columns. */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* Padding for individual footer columns. */
+.footer-col {
+    padding: 0 15px;
+}
+
+/* Footer logo styling. */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Headings for footer columns. */
+.footer-col h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+/* Remove padding from footer lists. */
+.footer-col ul {
+    padding: 0;
+}
+
+/* Margin for list items in footer. */
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+/* Styling for footer links with hover effect. */
+.footer-link {
+    color: var(--gray-light);
+    transition: color 0.3s ease;
+}
+
+/* Footer link hover color. */
+.footer-link:hover {
+    color: var(--primary-color);
+}
+
+/* About text in the footer. */
+.footer-about {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--gray-light);
+    margin-bottom: 20px;
+}
+
+/* Container for social media links. */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+/* Styling for individual social media icons. */
+.social-links a {
+    color: var(--gray-light);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+/* Social media icon hover color. */
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Bottom section of the footer with copyright information. */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--gray-light);
+}
+
+/* Login Modal */
+/* Overlay for the login modal, initially hidden. */
+.login-modal-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Shows the login modal overlay. */
+.login-modal-overlay.show {
+    display: flex;
+    opacity: 1;
+}
+
+/* The login panel itself, with initial hidden state and transition. */
+.login-panel {
+    background-color: var(--text-light);
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Shows the login panel with a slide-up effect. */
+.login-modal-overlay.show .login-panel {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Close button for the login modal. */
+.close-modal-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+/* Hover effect for the close modal button. */
+.close-modal-btn:hover {
+    color: var(--primary-color);
+}
+
+/* Title for the login form. */
+.login-title {
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Form group spacing within the login form. */
+.login-form .form-group {
+    margin-bottom: 20px;
+}
+
+/* Styling for login input fields. */
+.login-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--gray-light);
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f8f8f8;
+    color: var(--text-dark);
+}
+
+/* Placeholder text color for login inputs. */
+.login-input::placeholder {
+    color: #aaa;
+}
+
+/* Submit button for the login form. */
+.btn-login-submit {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the login submit button. */
+.btn-login-submit:hover {
+    background-color: var(--primary-hover);
+}
+
+/* "Or" divider styling. */
+.or-divider {
+    display: flex;
+    align-items: center;
+    margin: 25px 0;
+}
+
+/* Line for the "or" divider. */
+.line-or {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid var(--gray-light);
+}
+
+/* Text for the "or" divider. */
+.or-text {
+    padding: 0 15px;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Google Sign-in button styling. */
+.btn-google-signin {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #4285F4;
+    border: 1px solid var(--gray-light);
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover effect for Google Sign-in button. */
+.btn-google-signin:hover {
+    background-color: #f5f5f5;
+    border-color: #ccc;
+}
+
+/* Icon styling within Google Sign-in button. */
+.btn-google-signin .fab {
+    font-size: 1.2rem;
+}
+
+/* Register text and link below the login form. */
+.register-text {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Register link styling with hover effect. */
+.register-text a {
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+/* Register link hover underline. */
+.register-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* Media Queries */
+/* Styles for screens up to 1023px wide (tablets and smaller desktops) */
+@media (max-width: 1023px) {
+    /* Main navigation gap adjustment. */
+    .main-nav {
+        gap: 16px;
+    }
+
+    /* Hero and hire hero content layout change for smaller screens. */
+    .hero-content, .hire-hero-content {
+        flex-direction: column-reverse; /* Image on top, text below for better mobile flow */
+        text-align: center;
+    }
+
+    /* Hero and hire hero text alignment. */
+    .hero-text, .hire-hero-text {
+        text-align: center;
+    }
+
+    /* Hero and hire hero heading font size adjustment. */
+    .hero-text h1, .hire-hero-text h1 {
+        font-size: 2.8rem;
+    }
+
+    /* Hero and hire hero image margin. */
+    .hero-image, .hire-hero-image {
+        margin-bottom: 30px;
+    }
+
+    /* Center hero buttons. */
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    /* Advertise job content layout change. */
+    .advertise-job-content {
+        flex-direction: column; /* Stack vertically for smaller screens */
+    }
+
+    /* Advertise job text alignment. */
+    .advertise-job-text {
+        text-align: center;
+    }
+
+    /* Advertise job image margin. */
+    .advertise-job-image {
+        margin-bottom: 30px;
+    }
+
+    /* Advertise job logo positioning adjustment. */
+    .advertise-job-logo {
+        position: static; /* Remove absolute positioning */
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    /* Job listings container layout change. */
+    .job-listings-container {
+        flex-direction: column; /* Stack filters and job listings on tablets/smaller desktops */
+    }
+
+    /* Filters sidebar width and positioning. */
+    .filters-sidebar {
+        width: 100%; /* Full width for filters on smaller screens */
+        position: static; /* Remove sticky behavior on smaller screens */
+        margin-bottom: 30px;
+    }
+
+    /* Job listings grid column adjustment. */
+    .job-listings {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust job card columns for smaller screens */
+    }
+
+    /* Register form layout adjustment. */
+    .register-form {
+        grid-template-columns: 1fr; /* Single column for register form on tablets */
+    }
+}
+
+/* Styles for screens up to 767px wide (mobile phones) */
+@media (max-width: 767px) {
+    /* Header content layout change for mobile. */
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    /* Shows the mobile menu button. */
+    .mobile-menu-btn {
+        display: block; /* Show mobile menu button */
+    }
+
+    /* Hides main navigation by default on mobile. */
+    .main-nav {
+        display: none; /* Hide main nav by default */
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        text-align: center;
+    }
+
+    /* Shows main navigation when active (e.g., toggled by JS). */
+    .main-nav.show {
+        display: flex; /* Show nav when active */
+    }
+
+    /* Padding and border for navigation links on mobile. */
+    .nav-link {
+        padding: 10px 0;
+        border-bottom: 1px solid var(--gray-light);
+    }
+
+    /* Hides active indicator on mobile navigation links. */
+    .nav-link.active::after {
+        display: none; /* Hide active indicator on mobile */
+    }
+
+    /* Centers authentication buttons on mobile. */
+    .auth-buttons {
+        width: 100%;
+        justify-content: center; /* Center buttons on mobile */
+    }
+
+    /* Centers job listings section heading on mobile. */
+    .job-listings-section h1 {
+        text-align: center; /* Center title on mobile */
+    }
+
+    /* Centers job search section heading on mobile. */
+    .job-search .container h2 {
+        text-align: center;
+    }
+
+    /* Adjusts padding for filters sidebar on mobile. */
+    .filters-sidebar {
+        padding: 20px; /* Slightly less padding on mobile */
+    }
+
+    /* Changes job listings to a single column on mobile. */
+    .job-listings {
+        grid-template-columns: 1fr; /* Single column for jobs on mobile */
+    }
+
+    /* Stacks search inputs and button on mobile. */
+    .search-form {
+        flex-direction: column; /* Stack search inputs and button */
+        padding: 15px;
+    }
+
+    /* Removes min-width for search inputs on mobile for full flexibility. */
+    .search-form .search-input {
+        min-width: unset; /* Remove min-width for full flexibility */
+    }
+
+    /* Makes search button full width on mobile. */
+    .search-form .btn-primary {
+        width: 100%; /* Full width button */
+    }
+
+    /* Changes various grids to single column on mobile. */
+    .features-grid, .stats-grid, .footer-grid {
+        grid-template-columns: 1fr; /* Single column for grids on mobile */
+    }
+
+    /* Centers footer column text. */
+    .footer-col {
+        text-align: center;
+    }
+
+    /* Centers footer logo and social links. */
+    .footer-col .footer-logo, .social-links {
+        justify-content: center;
+    }
+
+    /* Adjusts padding for login panel on mobile. */
+    .login-panel {
+        padding: 30px 20px;
+    }
+
+    /* Adjusts font size for login title on mobile. */
+    .login-title {
+        font-size: 1.8rem;
+    }
+
+    @media (max-width: 768px) {
+    .auth-buttons {
+        display: none;
+    }
+}
+}
