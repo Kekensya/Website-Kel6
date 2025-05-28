@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobKu - Job Listings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">JK</div>
+                    <span class="logo-text">JobKu</span>
+                </div>
+
+                <button class="mobile-menu-btn" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav class="main-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="jobs.html" class="nav-link active">Search Jobs</a>
+                    <a href="#" class="nav-link">Job Alerts</a>
+                    <a href="hire.html" class="nav-link">Hire</a>
+                    <a href="#" class="nav-link">
+                        Career Advice <i class="fas fa-chevron-down"></i>
+                    </a>
+                </nav>
+                
+                <div class="auth-buttons">
+                    <a href="#" class="login-btn">
+                        <i class="fas fa-lock"></i> Login
+                    </a>
+                    <a href="hire.html" class="post-job-btn btn-primary">Pasang Loker</a> </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="job-search">
+        <div class="container">
+            <div class="search-form">
+                <div class="search-input">
+                    <input type="text" placeholder="Keywords/job title">
+                </div>
+                <div class="search-input">
+                    <input type="text" placeholder="Location">
+                </div>
+                <div class="search-input">
+                    <input type="text" placeholder="Distance">
+                </div>
+                <button class="search-btn btn-primary">Find Jobs</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="job-listings-section">
+        <div class="container">
+            <h1>Popular Jobs</h1>
+            
+            <div class="job-listings-container">
+                <div class="filters-sidebar">
+                    <button class="advanced-filters-btn btn-secondary">
+                        Advanced filters
+                    </button>
+                    
+                    <div class="filter-group">
+                        <div class="filter-header">
+                            <h3>Location</h3>
+                        </div>
+                        <div class="filter-options">
+                            <div class="filter-option">
+                                <input type="checkbox" id="malang">
+                                <label for="malang">Malang</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="jakarta">
+                                <label for="jakarta">Jakarta</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="bandung">
+                                <label for="bandung">Bandung</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="surabaya">
+                                <label for="surabaya">Surabaya</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <div class="filter-header">
+                            <h3>Work from...</h3>
+                        </div>
+                        <div class="filter-options">
+                            <div class="filter-option">
+                                <input type="checkbox" id="remote">
+                                <label for="remote">Remote</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="onsite">
+                                <label for="onsite">On-site</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="hybrid">
+                                <label for="hybrid">Hybrid</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <div class="filter-header">
+                            <h3>Work Type</h3>
+                        </div>
+                        <div class="filter-options">
+                            <div class="filter-option">
+                                <input type="checkbox" id="fulltime">
+                                <label for="fulltime">Full Time</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="parttime">
+                                <label for="parttime">Part Time</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="internship">
+                                <label for="internship">Internship</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="job-listings">
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="company-logo">Ab</div>
+                            <div>
+                                <h3>Social Media Specialist</h3>
+                                <p class="company-info">Part Time / On-site - PT Abadi / Bandung</p>
+                            </div>
+                        </div>
+                        
+                        <p class="job-description">
+                            Social Media analyst is needed to handle our social media accounts, the jobdesks are creating content, scheduling posts, and analyzing performance metrics.
+                        </p>
+                        
+                        <div class="job-tags">
+                            <span class="tag">Social Media</span>
+                            <span class="tag">Content</span>
+                            <span class="tag">Analytics</span>
+                        </div>
+                        
+                        <div class="job-footer">
+                            <p class="job-location">Bandung, Indonesia</p>
+                            <button class="btn-primary">Apply Now</button>
+                        </div>
+                    </div>
+                    
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="company-logo">As</div>
+                            <div>
+                                <h3>Front-end Web Developer</h3>
+                                <p class="company-info">Full Time / On-site - PT GigaNigga / Surabaya</p>
+                            </div>
+                        </div>
+                        
+                        <p class="job-description">
+                            Looking for a senior front-end web developer who has experience with React, TypeScript, and modern CSS frameworks.
+                        </p>
+                        
+                        <div class="job-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">React</span>
+                            <span class="tag">TypeScript</span>
+                        </div>
+                        
+                        <div class="job-footer">
+                            <p class="job-location">Surabaya, Indonesia</p>
+                            <button class="btn-primary">Apply Now</button>
+                        </div>
+                    </div>
+                    
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="company-logo">Co</div>
+                            <div>
+                                <h3>Senior Software Engineer</h3>
+                                <p class="company-info">TechCorp Inc.</p>
+                            </div>
+                        </div>
+                        
+                        <p class="job-description">
+                            We're looking for an experienced software engineer to join our growing team...
+                        </p>
+                        
+                        <div class="job-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                        </div>
+                        
+                        <div class="job-footer">
+                            <p class="job-location">San Francisco, CA</p>
+                            <button class="btn-primary">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pagination">
+                <button class="page-active">1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>></button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-icon">JK</div>
+                        <span class="logo-text">JobKu</span>
+                    </div>
+                    <p class="footer-about">
+                        Connecting talent with opportunity. Find your dream job or the perfect candidate today.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>For Job Seekers</h3>
+                    <ul>
+                        <li><a href="#" class="footer-link">Browse Jobs</a></li>
+                        <li><a href="#" class="footer-link">Job Alerts</a></li>
+                        <li><a href="#" class="footer-link">Career Advice</a></li>
+                        <li><a href="#" class="footer-link">Resume Builder</a></li>
+                        <li><a href="#" class="footer-link">Salary Calculator</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>For Employers</h3>
+                    <ul>
+                        <li><a href="#" class="footer-link">Post a Job</a></li>
+                        <li><a href="#" class="footer-link">Browse Candidates</a></li>
+                        <li><a href="#" class="footer-link">Recruiting Solutions</a></li>
+                        <li><a href="#" class="footer-link">HR Resources</a></li>
+                        <li><a href="#" class="footer-link">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#" class="footer-link">About Us</a></li>
+                        <li><a href="#" class="footer-link">Contact</a></li>
+                        <li><a href="#" class="footer-link">Careers</a></li>
+                        <li><a href="#" class="footer-link">Press</a></li>
+                        <li><a href="#" class="footer-link">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>
+                    © 2023 JobKu. All rights reserved. | 
+                    <a href="#" class="footer-link">Privacy Policy</a> | 
+                    <a href="#" class="footer-link">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
