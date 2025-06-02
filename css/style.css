@@ -874,16 +874,9 @@ button, input, select, textarea {
     max-height: 80px; /* Control size of partner logos */
     width: auto;
     object-fit: contain;
-    filter: grayscale(100%); /* Make logos grayscale */
-    opacity: 0.6;
-    transition: all 0.3s ease;
+    
 }
 
-/* Hover effect for partner logos. */
-.partner-logos img:hover {
-    filter: grayscale(0%);
-    opacity: 1;
-}
 
 /* Testimonial box styling. */
 .testimonial-box {
