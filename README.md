@@ -12,11 +12,13 @@ Di Indonesia masih banyak pencari kerja,  terutama anak muda yang kesulitan mene
 Hadirnya **JobKu** diharapkan memberikan harapan bagi warga sipil untuk memiliki pekerjaan yang lebih layak dan dapat meningkatkan perekonomian negara Indonesia
 
 ## ⚙️ Tech Stack
+<div style="">
 <a href="https://github.com/">  <img src="https://skillicons.dev/icons?i=html" height="40" alt="html logo"  /></a>
   <!-- <img width="12" /> -->
 <a href="https://css.com/">  <img src="https://skillicons.dev/icons?i=css" height="40" alt="css logo"  /></a>
   <!-- <img width="12" /> -->
 <a href="https://javascript.com/">  <img src="https://skillicons.dev/icons?i=javascript" height="40" alt="bootstrap logo"  /></a>
+</div>
   <!-- <img width="12" /> -->
 <!--<a href="https://getbootstrap.com/">  <img src="https://skillicons.dev/icons?i=bootstrap" height="40" alt="html5 logo"  /></a>-->
 
