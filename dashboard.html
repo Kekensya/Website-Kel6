@@ -1,0 +1,257 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - JobKu</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="/index.html" class="logo">
+                <div class="logo-icon">JK</div>
+                <span class="logo-text">JobKu</span>
+            </a>
+            <div class="logo">JobKu Dashboard</div>
+            <div class="user-menu">
+                <span>Admin User</span>
+                <div class="avatar">AU</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Dashboard -->
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav class="sidebar-menu">
+                <div class="menu-title">Main</div>
+                <a href="#" class="menu-item active">
+                    <i>📋</i> Job Listings
+                </a>
+                <a href="#" class="menu-item">
+                    <i>👥</i> Candidates
+                </a>
+                <a href="#" class="menu-item">
+                    <i>🏢</i> Companies
+                </a>
+                
+                <div class="menu-title">Settings</div>
+                <a href="#" class="menu-item">
+                    <i>⚙️</i> Settings
+                </a>
+                <a href="#" class="menu-item">
+                    <i>👋</i> Logout
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="page-header">
+                <h1 class="page-title">Job Listings</h1>
+                <button class="btn-primary" id="addJobBtn">+ Add New Job</button>
+            </div>
+
+            <!-- Job Listings Table -->
+            <div class="card">
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Position</th>
+                                <th>Company</th>
+                                <th>Location</th>
+                                <th>Salary</th>
+                                <th>Type</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Frontend Developer</td>
+                                <td>TechCorp</td>
+                                <td>Jakarta, Indonesia</td>
+                                <td>Rp15-20jt</td>
+                                <td><span class="work-type">Remote</span></td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td class="actions">
+                                    <button class="btn-secondary btn-sm">Edit</button>
+                                    <button class="btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Backend Engineer</td>
+                                <td>DataSystems</td>
+                                <td>Bandung, Indonesia</td>
+                                <td>Rp18-25jt</td>
+                                <td><span class="work-type">Hybrid</span></td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td class="actions">
+                                    <button class="btn-secondary btn-sm">Edit</button>
+                                    <button class="btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>UX Designer</td>
+                                <td>CreativeStudio</td>
+                                <td>Bali, Indonesia</td>
+                                <td>Rp12-18jt</td>
+                                <td><span class="work-type">Onsite</span></td>
+                                <td><span class="status-badge status-draft">Draft</span></td>
+                                <td class="actions">
+                                    <button class="btn-secondary btn-sm">Edit</button>
+                                    <button class="btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Product Manager</td>
+                                <td>InnovateCo</td>
+                                <td>Singapore</td>
+                                <td>S$6,000-8,000</td>
+                                <td><span class="work-type">Remote</span></td>
+                                <td><span class="status-badge status-closed">Closed</span></td>
+                                <td class="actions">
+                                    <button class="btn-secondary btn-sm">Edit</button>
+                                    <button class="btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Data Scientist</td>
+                                <td>AnalyticsPro</td>
+                                <td>Yogyakarta, Indonesia</td>
+                                <td>Rp20-30jt</td>
+                                <td><span class="work-type">WFH</span></td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td class="actions">
+                                    <button class="btn-secondary btn-sm">Edit</button>
+                                    <button class="btn-danger btn-sm">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add Job Modal -->
+    <div class="modal" id="jobModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Add New Job Listing</h3>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="jobForm">
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="jobTitle" class="form-label">Job Title</label>
+                                <input type="text" id="jobTitle" class="form-control" placeholder="e.g. Frontend Developer" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="company" class="form-label">Company</label>
+                                <input type="text" id="company" class="form-control" placeholder="Company name" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="location" class="form-label">Location</label>
+                                <input type="text" id="location" class="form-control" placeholder="e.g. Jakarta, Indonesia" required>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="salary" class="form-label">Salary Range</label>
+                                <input type="text" id="salary" class="form-control" placeholder="e.g. Rp15-20jt" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label class="form-label">Work Type</label>
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="workType" value="remote" checked> Remote
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="workType" value="onsite"> Onsite
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="workType" value="hybrid"> Hybrid
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="workType" value="wfh"> WFH
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="status" class="form-label">Status</label>
+                                <select id="status" class="form-control form-select">
+                                    <option value="active">Active</option>
+                                    <option value="draft">Draft</option>
+                                    <option value="closed">Closed</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description" class="form-label">Job Description</label>
+                        <textarea id="description" class="form-control form-textarea" placeholder="Enter detailed job description..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="requirements" class="form-label">Requirements</label>
+                        <textarea id="requirements" class="form-control form-textarea" placeholder="Enter job requirements..." required></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" id="cancelBtn">Cancel</button>
+                <button class="btn-primary" id="saveJobBtn">Save Job</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Modal functionality
+        const addJobBtn = document.getElementById('addJobBtn');
+        const closeModal = document.getElementById('closeModal');
+        const cancelBtn = document.getElementById('cancelBtn');
+        const jobModal = document.getElementById('jobModal');
+        
+        addJobBtn.addEventListener('click', () => {
+            jobModal.classList.add('active');
+        });
+        
+        closeModal.addEventListener('click', () => {
+            jobModal.classList.remove('active');
+        });
+        
+        cancelBtn.addEventListener('click', () => {
+            jobModal.classList.remove('active');
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === jobModal) {
+                jobModal.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+/* Job Search Section (jobs.html specific) */
+/* Styling for the job search section background and padding. */
+.job-search {
+    background-color: var(--form-bg);
+    padding: 30px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 50px; /* Space before listings */
+}
+
+/* Search form layout and styling. */
+.search-form {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    background-color: var(--text-light);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+/* Search input field container. */
+.search-input {
+    flex: 1; /* Allow inputs to grow */
+    min-width: 180px; /* Minimum width before wrapping */
+}
+
+/* Styling for search input fields. */
+.search-input input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--gray-light);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+/* Placeholder text color for search inputs. */
+.search-input input::placeholder {
+    color: #999;
+}
+
+/* Styling for the search button. */
+.search-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 8px;
+}
+
+/* Job Listings Section (jobs.html specific) */
+/* Section container for job listings. */
+.job-listings-section {
+    padding: 50px 0; /* Adjust padding as needed */
+    background-color: var(--bg-light);
+}
+
+/* Main heading for job listings section. */
+.job-listings-section h1 {
+    text-align: left; /* Align to left as per image */
+    font-size: 2.5rem;
+    margin-bottom: 30px; /* Space between title and content */
+    color: var(--text-dark);
+}
+
+/* Container for sidebar and job cards, using flexbox for side-by-side layout. */
+.job-listings-container {
+    display: flex; /* This is key for side-by-side layout */
+    gap: 30px; /* Space between sidebar and job cards */
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Styles for the filters sidebar. */
+.filters-sidebar {
+    flex: 0 0 280px; /* Fixed width for the sidebar */
+    background-color: var(--text-light);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    /* Make filters sticky on larger screens */
+    position: sticky;
+    top: 100px; /* Adjust based on header height */
+    align-self: flex-start; /* Ensure it sticks to the top of its flex container */
+}
+
+/* Styling for the "Advanced Filters" button. */
+.advanced-filters-btn {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 25px; /* Space below the button */
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the "Advanced Filters" button. */
+.advanced-filters-btn:hover {
+    background-color: var(--secondary-hover);
+}
+
+/* Styling for each filter group. */
+.filter-group {
+    margin-bottom: 20px;
+}
+
+/* Styling for filter group headers. */
+.filter-header {
+    border-bottom: 1px solid var(--gray-light);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Heading for filter group titles. */
+.filter-header h3 {
+    font-size: 1.1rem; /* Slightly smaller for filter group titles */
+    color: var(--text-dark);
+    margin: 0;
+}
+
+/* Styling for individual filter options (checkbox and label). */
+.filter-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Styling for checkboxes within filter options. */
+.filter-option input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: var(--primary-color); /* Styles the checkbox itself */
+}
+
+/* Styling for filter option labels. */
+.filter-option label {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
+/* Container for job cards, using CSS Grid for a responsive layout. */
+.job-listings {
+    flex: 1; /* Allows job listings to take up remaining space */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid for job cards */
+    gap: 25px;
+}
+
+/* Styling for individual job cards. */
+.job-card {
+    background-color: var(--text-light);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Job card header with company logo and title. */
+.job-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Styling for the company logo placeholder in job cards. */
+.company-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: var(--blue-dark);
+    color: var(--text-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Job title within the job card header. */
+.job-header h3 {
+    font-size: 1.25rem;
+    margin: 0;
+    color: var(--text-dark);
+}
+
+/* Company information within job cards. */
+.company-info {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Job description text within job cards. */
+.job-description {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Container for job tags. */
+.job-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Styling for individual job tags. */
+.tag {
+    background-color: var(--tag-blue);
+    color: var(--tag-blue-text);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Job card footer with location and apply button. */
+.job-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* Pushes to the bottom of the card */
+}
+
+/* Job location text within job cards. */
+.job-location {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Pagination controls styling. */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+/* Styling for pagination buttons. */
+.pagination button {
+    background-color: var(--gray-light);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: background-color 0.3s ease;
+}
+
+/* Pagination button hover effect. */
+.pagination button:hover {
+    background-color: var(--primary-hover);
+    color: var(--text-light);
+}
+
+/* Active pagination button styling. */
+.pagination button.page-active {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}

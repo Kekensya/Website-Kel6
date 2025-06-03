@@ -6,16 +6,16 @@
     <title>JobKu - Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/login-styles.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <div class="logo">
+                <a href="/index.html" class="logo">
                     <div class="logo-icon">JK</div>
                     <span class="logo-text">JobKu</span>
-                </div>
+                </a>
 
                 <button class="mobile-menu-btn" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
@@ -35,6 +35,24 @@
                     <a href="login.html" class="login-btn"> <i class="fas fa-lock"></i> Login
                     </a>
                     <a href="hire.html" class="post-job-btn btn-primary">Pasang Loker</a>
+                </div>
+
+                <!-- Mobile Navigation Modal -->
+                <div class="mobile-nav-overlay">
+                <div class="mobile-nav">
+                    <button class="close-menu-btn" aria-label="Close menu">✕</button>
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="jobs.html" class="nav-link">Search Jobs</a>
+                    <a href="#" class="nav-link">Job Alerts</a>
+                    <a href="hire.html" class="nav-link">Hire</a>
+                    <a href="#" class="nav-link">Career Advice</a>
+                    <div class="auth-buttons">
+                    <a href="login.html" class="login-btn open-login-modal">
+                        <i class="fas fa-lock"></i> Login
+                    </a>
+                    <a href="hire.html" class="post-job-btn btn-primary">Pasang Loker</a>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -121,7 +139,7 @@
             
             <div class="footer-bottom">
                 <p>
-                    © 2023 JobKu. All rights reserved. | 
+                    © 2025 JobKu. All rights reserved. | 
                     <a href="#" class="footer-link">Privacy Policy</a> | 
                     <a href="#" class="footer-link">Terms of Service</a>
                 </p>

@@ -1,0 +1,95 @@
+/* Impact Section */
+/* Main container for the impact section, with gradient background (assumed from hero). */
+.impact {
+    padding: 80px 0;
+    color: var(--text-light);
+    text-align: center;
+}
+
+/* Heading for the impact section. */
+.impact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--text-light);
+}
+
+/* Layout for impact content (text and image). */
+.impact-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+/* Text block within the impact section. */
+.impact-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+/* Box styling for impact text. */
+.impact-box {
+    background-color: rgba(255, 255, 255, 0.15); /* Slightly transparent white */
+    padding: 30px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px); /* Optional: add a blur effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Paragraph text within impact box. */
+.impact-box p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Image container within the impact section. */
+.impact-image {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Image styling within the impact section. */
+.impact-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Grid layout for statistics. */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+/* Styling for individual statistic items. */
+.stat-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 12px;
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Number styling for statistics. */
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+/* Label styling for statistics. */
+.stat-label {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    opacity: 0.9;
+}

@@ -1,0 +1,248 @@
+
+/* Hire Section (hire.html specific) */
+/* Hero section specific to the hire page (inherits many styles from .hero). */
+.hire-hero {
+    padding: 80px 0;
+}
+
+/* Hire hero content layout (inherits from .hero-content). */
+.hire-hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Hire hero text block styling (inherits from .hero-text). */
+.hire-hero-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+    color: var(--text-light);
+}
+
+/* Main heading for hire hero section (inherits from .hero-text h1). */
+.hire-hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+/* Paragraph text for hire hero section (inherits from .hero-text p). */
+.hire-hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Hire hero image container (inherits from .hero-image). */
+.hire-hero-image {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hire hero image styling (inherits from .hero-image img). */
+.hire-hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Section for advertising jobs. */
+.advertise-job {
+    padding: 80px 0;
+    background-color: var(--text-light);
+    text-align: center;
+}
+
+/* Content layout for advertising jobs, with image on the right. */
+.advertise-job-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap-reverse; /* Image on right, text on left */
+}
+
+/* Text block for advertising jobs. */
+.advertise-job-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+/* Heading for advertising job text. */
+.advertise-job-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+/* Paragraph text for advertising job. */
+.advertise-job-text p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Image container for advertising jobs. */
+.advertise-job-image {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image styling within advertising job section. */
+.advertise-job-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo overlay on the advertise job image. */
+.advertise-job-logo {
+    position: absolute;
+    bottom: -20px; /* Adjust as needed */
+    right: -20px; /* Adjust as needed */
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 15px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Image within the advertise job logo. */
+.advertise-job-logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: none; /* Remove shadow from this internal image */
+}
+
+/* Section for displaying our partners. */
+.our-partners {
+    padding: 80px 0;
+    background-color: var(--bg-light);
+    text-align: center;
+}
+
+/* Heading for the partners section. */
+.our-partners h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--text-dark);
+}
+
+/* Container for partner logos. */
+.partner-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+/* Styling for individual partner logos. */
+.partner-logos img {
+    max-height: 80px; /* Control size of partner logos */
+    width: auto;
+    object-fit: contain;
+    
+}
+
+
+/* Testimonial box styling. */
+.testimonial-box {
+    background-color: var(--text-light);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    max-width: 800px;
+    margin: 0 auto;
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* Paragraph within testimonial box. */
+.testimonial-box p {
+    margin: 0;
+}
+
+/* Section for company registration. */
+.register-company {
+    padding: 80px 0;
+    text-align: center;
+    color: var(--text-light);
+}
+
+/* Heading for company registration section. */
+.register-company h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--text-light);
+}
+
+/* Container for the registration form. */
+.register-form-container {
+    background-color: var(--form-bg); /* Use the new form background color */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--text-dark); /* Ensure text is readable on light background */
+}
+
+/* Grid layout for the registration form. */
+.register-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Form group styling within registration form. */
+.register-form .form-group {
+    margin-bottom: 0; /* Remove default margin as grid handles spacing */
+}
+
+/* Styling for text, email, tel, and URL input fields in registration form. */
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="tel"],
+.register-form input[type="url"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--gray-light);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text-dark);
+    background-color: #fff; /* White background for inputs */
+}
+
+/* Placeholder text color for registration form inputs. */
+.register-form input::placeholder {
+    color: #999;
+}
+
+/* Submit button styling for registration form. */
+.register-form button[type="submit"] {
+    grid-column: 1 / -1; /* Span across all columns */
+    padding: 15px 30px;
+    font-size: 1.1rem;
+}
