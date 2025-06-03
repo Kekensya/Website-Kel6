@@ -138,3 +138,27 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+
+// Cek status login
+window.addEventListener('DOMContentLoaded', () => {
+  const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+  const loginBtn = document.querySelector('.auth-buttons');
+
+  if (isLoggedIn && loginBtn) {
+    loginBtn.innerHTML = `<a href="user.html" class="user-info">
+                    <span>Welcome, Lorem Ipsum</span>
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="user-avatar">
+                    <i class="fas fa-chevron-down"></i>
+                </a>`;
+    loginBtn.href = 'user.html'; // halaman akun user
+  }
+});
+
+
+// Logout logic
+document.getElementById('logout-btn').addEventListener('click', () => {
+  localStorage.removeItem('isLoggedIn');
+  localStorage.removeItem('userEmail');
+  window.location.href = 'index.html';
+});

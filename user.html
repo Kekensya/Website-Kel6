@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/user.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/index.html" class="logo">
+                    <div class="logo-icon">JK</div>
+                    <span class="logo-text">JobKu</span>
+                </a>
+
+                <button class="mobile-menu-btn" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav class="main-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="jobs.html" class="nav-link">Search Jobs</a>
+                    <a href="#" class="nav-link">Job Alerts</a>
+                    <a href="hire.html" class="nav-link">Hire</a>
+                    <a href="#" class="nav-link">
+                        Career Advice <i class="fas fa-chevron-down"></i>
+                    </a>
+                </nav>
+                
+                <div class="auth-buttons">
+                    <a href="login.html" class="login-btn"> <i class="fas fa-lock"></i> Login
+                    </a>
+                    <a href="hire.html" class="post-job-btn btn-primary">Pasang Loker</a>
+                </div>
+
+                <!-- Mobile Navigation Modal -->
+                <div class="mobile-nav-overlay">
+                <div class="mobile-nav">
+                    <button class="close-menu-btn" aria-label="Close menu">✕</button>
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="jobs.html" class="nav-link">Search Jobs</a>
+                    <a href="#" class="nav-link">Job Alerts</a>
+                    <a href="hire.html" class="nav-link">Hire</a>
+                    <a href="#" class="nav-link">Career Advice</a>
+                    <div class="auth-buttons">
+                    <a href="login.html" class="login-btn open-login-modal">
+                        <i class="fas fa-lock"></i> Login
+                    </a>
+                    <a href="hire.html" class="post-job-btn btn-primary">Pasang Loker</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <!-- Left Side (Profile Card) -->
+            <div class="profile-card">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile" class="profile-avatar">
+                <h2 class="profile-name">Lorem Ipsum</h2>
+                <p class="profile-role">Frontend Developer (React)</p>
+                
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">15</div>
+                        <div class="stat-label">Applications</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Interviews</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">80%</div>
+                        <div class="stat-label">Profile Complete</div>
+                    </div>
+                </div>
+                
+                <p class="profile-bio">
+                    Creative designer with 8+ years of experience in UI/UX design. Passionate about creating beautiful and functional digital experiences.
+                </p>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
+                </div>
+                
+                <div class="profile-actions">
+                    <button class="btn btn-primary" onclick="showEditModal('profile')">
+                        <i class="fas fa-pen"></i> Edit Profile
+                    </button>
+                    <button class="btn btn-outline" onclick="showEditModal('cv')">
+                        <i class="fas fa-file"></i> Update CV
+                    </button>
+                    <button id="logout-btn" class="btn btn-outline">Logout</button>
+                </div>
+            </div>
+            
+            <!-- Right Side (Content) -->
+            <div class="right-content">
+                <div class="content-section">
+                    <div class="quick-stats">
+                        <div class="stat-card">
+                            <i class="fas fa-tasks"></i>
+                            <div>
+                                <h3>Pending Tasks</h3>
+                                <p>5 tasks to complete</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-project-diagram"></i>
+                            <div>
+                                <h3>Active Projects</h3>
+                                <p>3 projects in progress</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-bell"></i>
+                            <div>
+                                <h3>Notifications</h3>
+                                <p>2 unread messages</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-section">
+                    <h2 class="section-title">Recent Activity</h2>
+                    <div class="activity-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <p>Completed task <strong>Dashboard Design</strong></p>
+                            <small>10 minutes ago</small>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <i class="fas fa-comment"></i>
+                        <div>
+                            <p>Received comment on <strong>Project X</strong></p>
+                            <small>1 hour ago</small>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <i class="fas fa-upload"></i>
+                        <div>
+                            <p>Uploaded new file to <strong>Documentation</strong></p>
+                            <small>3 hours ago</small>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <h3 class="item-title">Senior UI/UX Designer</h3>
+                            <span class="item-date">2020 - Present</span>
+                        </div>
+                        <p class="item-subtitle">TechSolutions Inc.</p>
+                        <p class="item-description">
+                            Lead designer responsible for the overall user experience of company products.
+                            Work closely with product managers and developers to create intuitive interfaces.
+                        </p>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <h3 class="item-title">UI Designer</h3>
+                            <span class="item-date">2017 - 2020</span>
+                        </div>
+                        <p class="item-subtitle">Digital Agency</p>
+                        <p class="item-description">
+                            Designed websites and mobile applications for various clients across industries.
+                            Created wireframes, prototypes, and final design assets.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="content-section">
+                    <h2 class="section-title">Education</h2>
+                    
+                    <div class="education-item">
+                        <div class="item-header">
+                            <h3 class="item-title">Master of Design</h3>
+                            <span class="item-date">2015 - 2017</span>
+                        </div>
+                        <p class="item-subtitle">University of Creative Arts</p>
+                        <p class="item-description">
+                            Specialized in Interaction Design and User Experience.
+                        </p>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="item-header">
+                            <h3 class="item-title">Bachelor of Fine Arts</h3>
+                            <span class="item-date">2011 - 2015</span>
+                        </div>
+                        <p class="item-subtitle">State University</p>
+                        <p class="item-description">
+                            Major in Graphic Design with minor in Psychology.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="content-section">
+                    <div class="tabs">
+                        <div class="tab active" data-tab="projects">Projects</div>
+                        <div class="tab" data-tab="saved">Saved</div>
+                        <div class="tab" data-tab="liked">Liked</div>
+                    </div>
+                    
+                    <div class="tab-content active" id="projects-tab">
+                        <div class="project-grid">
+                            <div class="project-card">
+                                <img src="https://via.placeholder.com/400x250" alt="Project" class="project-image">
+                                <div class="project-body">
+                                    <h3 class="project-title">E-commerce Mobile App</h3>
+                                    <p class="project-description">Complete UI/UX redesign for fashion retail app with improved checkout flow.</p>
+                                    <div class="project-tags">
+                                        <span class="project-tag">Mobile</span>
+                                        <span class="project-tag">E-commerce</span>
+                                        <span class="project-tag">UI/UX</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="project-card">
+                                <img src="https://via.placeholder.com/400x250" alt="Project" class="project-image">
+                                <div class="project-body">
+                                    <h3 class="project-title">Banking Dashboard</h3>
+                                    <p class="project-description">Modern dashboard interface for online banking platform.</p>
+                                    <div class="project-tags">
+                                        <span class="project-tag">Web</span>
+                                        <span class="project-tag">Dashboard</span>
+                                        <span class="project-tag">Finance</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="project-card">
+                                <img src="https://via.placeholder.com/400x250" alt="Project" class="project-image">
+                                <div class="project-body">
+                                    <h3 class="project-title">Fitness Tracking App</h3>
+                                    <p class="project-description">From concept to final design for health and fitness application.</p>
+                                    <div class="project-tags">
+                                        <span class="project-tag">Mobile</span>
+                                        <span class="project-tag">Health</span>
+                                        <span class="project-tag">UI</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="saved-tab">
+                        <p>No saved items yet.</p>
+                    </div>
+                    
+                    <div class="tab-content" id="liked-tab">
+                        <p>No liked items yet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal" id="profile-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="hideModal('profile')">&times;</span>
+            <h2>Edit Profile</h2>
+            <form>
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" value="Lorem Ipsum">
+                </div>
+                <div class="form-group">
+                    <label>Headline</label>
+                    <input type="text" value="Frontend Developer (React)">
+                </div>
+                <div class="form-group">
+                    <label>About</label>
+                    <textarea>Passionate frontend developer with 3 years of experience building responsive web applications using React.js and modern CSS. Looking for new opportunities to grow my skills.</textarea>
+                </div>
+                <button type="button" class="btn btn-primary">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit Skills Modal -->
+    <div class="modal" id="skills-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="hideModal('skills')">&times;</span>
+            <h2>Edit Skills</h2>
+            <form>
+                <div class="form-group">
+                    <label>Add Skill</label>
+                    <div class="skill-input">
+                        <input type="text" placeholder="e.g. React">
+                        <button type="button" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+                <div class="current-skills">
+                    <h3>Your Skills</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">JavaScript <i class="fas fa-times"></i></span>
+                        <span class="skill-tag">React <i class="fas fa-times"></i></span>
+                        <span class="skill-tag">HTML <i class="fas fa-times"></i></span>
+                        <span class="skill-tag">CSS <i class="fas fa-times"></i></span>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary">Save Skills</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Modal functions
+        function showEditModal(type) {
+            document.getElementById(`${type}-modal`).style.display = 'block';
+        }
+        
+        function hideModal(type) {
+            document.getElementById(`${type}-modal`).style.display = 'none';
+        }
+        
+        // Tab functionality
+        const tabs = document.querySelectorAll('.tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const targetTab = tab.getAttribute('data-tab');
+                
+                // Remove active class from all tabs and contents
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked tab and corresponding content
+                tab.classList.add('active');
+                document.getElementById(`${targetTab}-tab`).classList.add('active');
+            });
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
