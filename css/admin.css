@@ -93,6 +93,15 @@
         .btn-danger {
             background-color: #FEE2E2;
             color: #B91C1C;
+            /* color: var(--text-light); */
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-block; /* Ensure it respects padding/margin */
+            text-align: center;
         }
 
         .btn-danger:hover {
