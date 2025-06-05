@@ -588,66 +588,7 @@ h1, h2, h3, h4, h5, h6 {
         grid-template-columns: 1fr; /* Stack stat cards vertically */
     }
 
-    .project-grid {
-        grid-template-columns: 1fr; /* Stack project cards vertically */
-    }
-
-    .modal-content {
-        margin: 5% auto; /* Adjust modal margin for smaller screens */
-        width: 95%; /* Wider modal on small screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .header-content {
-        padding: 10px;
-    }
-
-    .logo {
-        font-size: 20px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .profile-card {
-        padding: 20px;
-    }
-
-    .profile-avatar {
-        width: 120px;
-        height: 120px;
-    }
-
-    .profile-name {
-        font-size: 20px;
-    }
-
-    .stat-number {
-        font-size: 16px;
-    }
-
-    .stat-label {
-        font-size: 10px;
-    }
-
-    .content-section {
-        padding: 20px;
-    }
-
-    .section-title {
-        font-size: 18px;
-    }
-
-    .item-title {
-        font-size: 16px;
-    }
-
-    .btn {
-        padding: 8px 15px;
-        font-size: 14px;
-    }
-}
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
