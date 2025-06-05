@@ -158,6 +158,12 @@
             localStorage.setItem('userEmail', email); // optional
             window.location.href = 'index.html'; // redirect setelah login
         });
+          // Cegah user buka login page jika sudah login
+            window.addEventListener('DOMContentLoaded', () => {
+                if (localStorage.getItem('isLoggedIn') === 'true') {
+                window.location.href = 'user.html'; // langsung redirect
+                }
+            });
     </script>
     <script src="js/script.js"></script>
 </body>
