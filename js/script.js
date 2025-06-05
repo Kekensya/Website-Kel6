@@ -123,20 +123,33 @@ document.addEventListener('DOMContentLoaded', function () {
     // Login form
     const loginForm = document.querySelector('.login-form');
     if (loginForm) {
-        loginForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const email = loginForm.querySelector('input[type="email"]').value;
-            const password = loginForm.querySelector('input[type="password"]').value;
+    loginForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const email = loginForm.querySelector('input[type="email"]').value;
+        const password = loginForm.querySelector('input[type="password"]').value;
 
-            if (email === '' || password === '') {
-                alert('Mohon isi semua field.');
-                return;
-            }
+        if (email === '' || password === '') {
+        alert('Mohon isi semua field.');
+        return;
+        }
 
-            alert(`Login attempted with:\nEmail: ${email}\nPassword: ${password}`);
-            loginForm.reset();
-        });
+        // Demo akun login
+        if (email === 'admin@jobku.com' && password === 'admin123') {
+        localStorage.setItem('isLoggedIn', 'true');
+        localStorage.setItem('userRole', 'admin');
+        localStorage.setItem('userEmail', email);
+        window.location.href = 'admin.html';
+        } else if (email === 'user@jobku.com' && password === 'user123') {
+        localStorage.setItem('isLoggedIn', 'true');
+        localStorage.setItem('userRole', 'user');
+        localStorage.setItem('userEmail', email);
+        window.location.href = 'user.html';
+        } else {
+        alert('Email atau password salah.\nGunakan:\nAdmin: admin@jobku.com / admin123\nUser: user@jobku.com / user123');
+        }
+    });
     }
+
 });
 
 

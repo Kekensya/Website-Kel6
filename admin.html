@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Profile - JobKu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/user.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">JK</div>
+          <span class="logo-text">JobKu</span>
+        </a>
+        <button class="mobile-menu-btn" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav class="main-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="jobs.html" class="nav-link">Search Jobs</a>
+          <a href="#" class="nav-link">Job Alerts</a>
+          <a href="hire.html" class="nav-link">Hire</a>
+          <a href="#" class="nav-link">Career Advice <i class="fas fa-chevron-down"></i></a>
+        </nav>
+        <div class="auth-buttons">
+          <a href="login.html" class="login-btn"><i class="fas fa-user"></i> Admin</a>
+          <a href="dashboard.html" class="post-job-btn btn-primary">Dashboard</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="main-content">
+      <div class="profile-card">
+        <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Profile" class="profile-avatar" />
+        <h2 class="profile-name">Admin JobKu</h2>
+        <p class="profile-role">Recruiter / Admin</p>
+
+        <div class="profile-stats">
+          <div class="stat-item">
+            <div class="stat-number">43</div>
+            <div class="stat-label">Jobs Posted</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">127</div>
+            <div class="stat-label">Applications</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">22</div>
+            <div class="stat-label">Hires</div>
+          </div>
+        </div>
+
+        <p class="profile-bio">
+          Administrator with a strong background in talent acquisition. Passionate about connecting great companies with top talent.
+        </p>
+
+        <div class="social-links">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-envelope"></i></a>
+        </div>
+
+        <div class="profile-actions">
+          <a href="dashboard.html" class="btn btn-primary">
+            <i class="fas fa-chart-line"></i> Go to Dashboard
+          </a>
+          <button id="logout-btn" class="btn btn-outline">Logout</button>
+        </div>
+      </div>
+
+      <div class="right-content">
+        <div class="content-section">
+          <h2 class="section-title">Latest Job Posts</h2>
+          <div class="activity-item">
+            <i class="fas fa-briefcase"></i>
+            <div>
+              <p>Added job post <strong>Frontend Developer</strong></p>
+              <small>1 hour ago</small>
+            </div>
+          </div>
+          <div class="activity-item">
+            <i class="fas fa-briefcase"></i>
+            <div>
+              <p>Updated job post <strong>UI/UX Designer</strong></p>
+              <small>3 hours ago</small>
+            </div>
+          </div>
+          <div class="activity-item">
+            <i class="fas fa-user-check"></i>
+            <div>
+              <p>Accepted candidate for <strong>Project Manager</strong></p>
+              <small>Yesterday</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2 class="section-title">Admin Tools</h2>
+          <div class="quick-stats">
+            <div class="stat-card">
+              <i class="fas fa-plus"></i>
+              <div>
+                <h3>Post Job</h3>
+                <p>Create a new job vacancy</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <i class="fas fa-users"></i>
+              <div>
+                <h3>View Candidates</h3>
+                <p>Check applicant list</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <i class="fas fa-chart-bar"></i>
+              <div>
+                <h3>Insights</h3>
+                <p>See hiring analytics</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Logout logic
+    document.getElementById('logout-btn').addEventListener('click', () => {
+      localStorage.removeItem('isLoggedIn');
+      localStorage.removeItem('userEmail');
+      window.location.href = 'index.html';
+    });
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>
